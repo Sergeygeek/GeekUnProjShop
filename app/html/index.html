@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/product.css">
-    <link rel="stylesheet" href="bower_components/jquery-ui/themes/base/all.css">
+    <link rel="stylesheet" href="style/jquery-ui.theme.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
     <header>
@@ -501,7 +503,7 @@
             
         </section>
     </footer>
-    <script src="js/Carousel.js"></script>
+    <script src="js/Carousel.min.js"></script>
     <script>
         $(document).ready(() => {
             let carousel = new Carousel('json/popItem.json', '.slider', '#slider-img');

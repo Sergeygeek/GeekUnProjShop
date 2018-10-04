@@ -246,12 +246,14 @@ header {
 
 .nav-menu {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    
 }
 
 .nav-menu li {
     position: relative;
     list-style-type: none;
+    z-index: 3; 
 }
 
 .nav-menu > li:hover .mega-box {
