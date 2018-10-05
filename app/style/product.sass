@@ -1,0 +1,322 @@
+@import "vars"
+
+.product-header 
+    height: 148px
+    background-color: #f8f3f4
+
+
+.product-header_container 
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+
+.product-header_title 
+    color: #f16d7f
+    font-size: 24px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+
+
+.breadcrumbs 
+    font-size: 14px
+    line-height: 20px
+    text-transform: uppercase
+    color: #636363
+    font-weight: 300
+    text-decoration: none
+    transition: color 0.3s
+
+
+.breadcrumbs:hover 
+    color: #f16d7f
+
+.breadcrumbs:last-of-type 
+    color: #f16d7f
+    font-weight: 700
+
+.main 
+    margin-top: 60px
+
+
+.sidebar details 
+    margin-bottom: 18px
+
+.sidebar 
+    margin-right: 50px
+
+.sidebar ul 
+    padding: 22px 17px
+
+
+.sidebar summary 
+    width: 232px
+    height: 37px
+    color: #ef5b70
+    font-size: 14px
+    font-weight: 700
+    line-height: 37px
+    text-transform: uppercase
+    border-left: 5px solid #ef5b70
+    border-bottom: 1px solid #ebebeb
+    padding-left: 11px
+    display: flex
+    justify-content: space-between
+
+
+summary::-webkit-details-marker 
+    display: none
+
+
+summary:after 
+    content: '\25bc'
+    color: #6f6e6e
+
+
+details[open] > summary:after 
+    content: '\25b2'
+    color: #ef5b70
+
+.sidebar li 
+    list-style-type: none
+
+
+.sidebar a 
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 33px
+    text-transform: uppercase
+    text-decoration: none
+    transition: color 0.3s
+
+
+.sidebar a:hover 
+    color: #ef5b70
+
+
+.main-container 
+    display: flex
+
+
+.top-filter 
+    display: flex
+    justify-content: space-between
+    width: 848px
+
+
+.top-filter h3 
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    margin-bottom: 25px
+
+.link-wrapper 
+    width: 176px
+    height: 39px
+    display: flex
+    flex-wrap: wrap
+
+
+.trend a
+    display: block
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    text-decoration: none
+    border-right: 2px solid #dfdfdf
+    padding-right: 8px
+    margin-right: 8px
+    margin-bottom: 3px
+    transition: color 0.3s
+
+
+.trend a:nth-child(3n) 
+    margin-right: 0
+
+
+.trend a:hover 
+    color: #ef5b70
+
+.size 
+    width: 261px
+    height: 73px
+
+
+.size label 
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    text-transform: uppercase
+    margin-left: 9px
+
+
+.check-wrapper 
+    display: flex
+    flex-wrap: wrap
+
+.check-wrapper p 
+    width: 48px
+    margin-right: 23px
+
+
+.check-wrapper p:nth-child(4n) 
+    margin-right: 0
+
+
+input[type="range"] 
+    width: 262px
+
+
+.filter-footer 
+    width: 846px
+    height: 50px
+    background-color: #f3f3f3
+    margin-top: 42px
+    color: #6f6e6e
+    text-transform: capitalize
+    display: flex
+    align-items: center
+    padding-left: 10px
+
+
+.filter-footer > div 
+    display: flex
+    background-color: #ffffff
+    margin-right: 10px
+    height: 30px
+
+.filter-footer h3 
+    color: #6f6e6e
+    font-size: 14px
+    font-weight: 400
+    line-height: 30px
+    padding-left: 12px
+    padding-right: 9px
+    border-right: 1px solid #ededed
+
+.filter-footer details 
+    font-size: 14px
+    font-weight: 400
+    line-height: 30px
+    border-right: 1px solid #ebebeb
+
+
+.filter-footer summary 
+    padding-left: 11px
+    padding-right: 9px
+
+
+.products 
+    margin-top: 48px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+.filter-footer details
+    position: relative
+
+.filter-footer summary 
+    display: flex
+
+
+.filter-footer summary:after 
+    content: '\25bc'
+    display: block
+    color: #6f6e6e
+    margin-left: 19px
+
+
+details[open] > summary:after 
+    content: '\25b2'
+    color: #ef5b70
+    display: block
+
+
+.details 
+    position: absolute
+
+.pagination-wrapper
+    margin-top: 43px
+    display: flex
+    justify-content: space-between
+    
+    .pagination
+        padding: 15px
+        border: 1px solid #ebebeb
+
+        a
+            color: #c4c4c4
+            font-size: 16px
+            font-weight: bold
+            text-decoration: none
+            padding: 0 5px
+            transition: color 0.3s
+
+            .item-active
+                color: #ef5b70
+
+            &:hover
+                color: #ef5b70
+
+.btn-view
+    display: block
+    border-radius: 3px
+    border: 1px solid #ef5b70
+    background-color: #ffffff
+    color: #ef5b70
+    font-size: 16px
+    text-decoration: none
+    padding: 15px 45px
+    transition: color 0.3s
+    transition: background-color 0.3s
+
+    &:hover
+        background-color: #ef5b70
+        color: #fff
+
+.feature-banner
+    background-color: #222224
+
+.feature-banner_hor
+    padding-top: 89px
+    padding-bottom: 115px
+
+.feature-container
+    display: flex
+    justify-content: space-between
+
+    .feature-item
+        color: #fbfbfb
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        width: 310px
+        height: 140px
+        font-size: 20px
+        font-weight: 700
+
+        p
+            text-align: justify
+            font-size: 14px
+            font-weight: 300
+            line-height: 23.95px
+
+.subscribe
+    margin-top: 0
+
+.subscribe-image
+    padding: 10px
+
+@import "single_page"
+@import "checkout"
+@import "shopping-cart"
+
+
+

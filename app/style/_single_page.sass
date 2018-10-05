@@ -1,0 +1,164 @@
+.image-slider
+    height: 777px
+    border: 1px solid #eaeaea
+    background-color: #f7f7f7
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
+.arrow-btn
+    width: 47px
+    height: 47px
+    background-color: $btn-slider
+    display: flex
+    text-decoration: none
+    align-items: center
+    justify-content: center
+    transition: background-color 0.3s
+
+    .fas
+        width: 8px
+        height: 14px
+        color: #fff
+
+    &:hover
+        background-color: $btn-slider - #222222
+
+
+.image-slider_container
+    display: flex
+    justify-content: center
+
+.product-description
+    border: 1px solid #eaeaea
+    padding-top: 73px
+    padding-bottom: 122px
+    transform: translate(0, -86px)
+    background-color: #ffffff
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__prize
+        margin-top: 37px
+
+    &__filter
+        margin-top: 43px
+
+    &__button
+        margin-top: 28px
+
+.product-category
+    text-align: center
+    color: $main-color
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    margin-bottom: 14px
+
+.product-name
+    color: #4d4d4d
+    font-size: 18px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+
+.product-description__product-name
+    margin-top: 18px
+
+.text
+    color: #5e5e5e
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    width: 618px
+    text-align: justify
+
+.product-description__text
+    margin-top: 67px
+
+.characteristics
+    display: flex
+    justify-content: space-around
+    width: 618px
+
+    p
+        margin-top: 28px
+        color: #b9b9b9
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+    
+    span
+        color: #2f2f2f
+
+.prize
+    color: #ef5b70
+    font-size: 24px
+    font-weight: 700
+
+.filter-product
+    border-top: 1px solid #eaeaea
+    padding-top: 63px
+    display: flex
+    justify-content: space-between
+    width: 537px
+
+    h3 
+        color: #2f2f2f
+        font-size: 14px
+        font-weight: 700
+        margin-bottom: 16px
+
+    select 
+        width: 144px
+        border: 1px solid #eaeaea
+        background-color: #ffffff
+        color: #bcbcbc
+        font-size: 13px
+        font-weight: 400
+        padding-top: 12px
+        padding-left: 15px
+        padding-right: 9px
+        padding-bottom: 12px
+        outline: none
+        //appearance: none
+
+.quantity
+    width: 144px
+    height: 38px
+    border-color: #eaeaea
+
+.button
+    width: 537px
+    border: 1px solid #ef5b70
+    background-color: #ffffff
+    display: flex
+    justify-content: center
+    text-decoration: none
+    padding: 21px 0
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 700
+    box-sizing: border-box
+    transition: box-shadow 1s
+
+    &:hover
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+
+    img 
+        margin-right: 15px
+
+.title
+    color: #4d4d4d
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+
+.title_similar
+    font-weight: 900
+
+.similar__products
+    margin-top: 71px
+    margin-bottom: 73px

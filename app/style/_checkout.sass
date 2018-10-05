@@ -1,0 +1,126 @@
+.checkout-item
+    border-top: 1px solid #e8e8e8
+
+    &:first-of-type
+        border-top: none
+
+    &:last-of-type
+        border-bottom: 1px solid #e8e8e8
+
+    &:first-of-type
+        margin-top: 56px
+    &:last-of-type
+        margin-bottom: 93px
+
+    &[open] > .summary:after
+        content: ''
+
+    &__form
+        margin-top: 34px
+        margin-bottom: 33px
+
+        & em
+            color: #ff0d0d
+        
+        &-log-in
+            margin-top: 27px
+            margin-bottom: 32px
+
+.summary
+    color: #222222
+    font-size: 16px
+    font-weight: 700
+    line-height: 72px
+    text-transform: uppercase
+    outline: none
+ 
+    &:after
+        content: ''
+
+.proposal-wrap
+    display: flex
+    padding: 40px 35px
+    justify-content: space-between
+
+.reg-proposal
+
+    &__btn
+        margin-top: 38px
+
+.checkout-title
+    font-size: 13px
+    font-weight: 400
+    text-transform: uppercase
+
+    &__checkout-message
+        margin-top: 15px
+
+.checkout-message
+    color: #b3b2b2
+    font-size: 13px
+    font-weight: 400
+
+.input-name
+    font-size: 12px
+    font-weight: 400
+    text-transform: uppercase
+
+    &__radio
+        line-height: 50px
+
+.plusses
+    margin-top: 33px
+
+.btn
+    display: inline-block
+    border: 1px solid #eaeaea
+    background-color: #ffffff
+    color: #4a4a4a
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    padding: 19px 53px
+    text-decoration: none
+    transition: background-color 0.5s
+
+    &:hover
+        background-color: $main-color
+        color: #fff
+
+    &_cart
+        font-size: 11px
+        padding: 12px 15px
+
+    &_red
+        background-color: #f16d7f
+        color: #ffffff
+        transition: box-shadow 0.5s
+
+        &:hover
+            box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.16)
+
+
+.input
+    width: 390px
+    height: 45px
+    border: 1px solid #eaeaea
+    outline: none
+    padding-left: 15px
+    padding-right: 15px
+    font-size: 14px
+    margin-top: 16px
+    margin-bottom: 23px
+
+.required
+    color: #ff0d0d
+    font-size: 13px
+    font-weight: 400
+
+.if-forgot
+    color: #222222
+    font-size: 14px
+    font-weight: 400
+    text-decoration: none
+
+.log-in__btn
+    margin-right: 32px
