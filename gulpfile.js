@@ -9,7 +9,9 @@ let gulp = require('gulp'),
     delFiles = require('del'),
     cssMin = require('gulp-csso'),
     babel = require('gulp-babel'),
-    pug = require('gulp-pug');
+    pug = require('gulp-pug'),
+    jsonMinify = require('gulp-json-minify'),
+    imageMin = require('gulp-imagemin');
 
 const paths = {
   devHtml: 'app/html/*.html',
@@ -17,10 +19,12 @@ const paths = {
   devCss: 'app/style/**/*.css',
   devJs: 'app/js/**/*.js',
   devImg: 'app/img/**/*.+(png|svg|img)',
+  devJson: 'app/json/**/*.json',
   project: 'dist',
   projectCss: 'dist/style',
   projectJs: 'dist/js',
-  projectImg: 'dist/img'
+  projectImg: 'dist/img',
+  projectJson: 'dist/json'
 };
 
 gulp.task('html', () => {
@@ -68,7 +72,6 @@ gulp.task('clean', () => {
 
 gulp.task('server', () => {
   return bs({
-    // browser: 'google chrome',
     server: {
       baseDir: 'dist'
     }
@@ -77,7 +80,14 @@ gulp.task('server', () => {
 
 gulp.task('img', () => {
   return gulp.src(paths.devImg)
+    .pipe(imageMin())
     .pipe(gulp.dest(paths.projectImg));
+});
+
+gulp.task('json', () => {
+  return gulp.src(paths.devJson)
+    .pipe(jsonMinify())
+    .pipe(gulp.dest(paths.projectJson));
 });
 
 gulp.task('sass:watch', () => {
@@ -108,4 +118,4 @@ gulp.task('css:watch', () => {
   }));
 });
 
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'css', 'js:es6', 'js:babel', 'server', 'img', 'sass:watch', 'js:watch', 'css:watch', 'html:watch')))
+gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'css', 'js:es6', 'js:babel', 'server', 'img', 'json', 'sass:watch', 'js:watch', 'css:watch', 'html:watch')))
