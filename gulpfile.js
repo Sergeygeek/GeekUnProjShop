@@ -49,6 +49,12 @@ gulp.task('css', () => {
       .pipe(gulp.dest(paths.projectCss))
 });
 
+gulp.task('concat', () => {
+  return gulp.src('dist/style/**/*.min.css')
+      .pipe(concat('all.css'))
+      .pipe(gulp.dest(paths.projectCss))
+})
+
 gulp.task('js:es6', () => {
   return gulp.src(paths.devJs)
       .pipe(gulp.dest(paths.projectJs))
@@ -118,4 +124,4 @@ gulp.task('css:watch', () => {
   }));
 });
 
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'css', 'js:es6', 'js:babel', 'server', 'img', 'json', 'sass:watch', 'js:watch', 'css:watch', 'html:watch')))
+gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'css', 'js:es6', 'js:babel', 'img', 'json',), gulp.parallel('concat', 'sass:watch', 'css:watch', 'html:watch', 'js:watch', 'server')))
