@@ -38,6 +38,7 @@ gulp.task('sass', () => {
       .pipe(sass())
       .pipe(autoPrefixer())
       .pipe(cssMin())
+      .pipe(rename({suffix: '.min'}))
       .pipe(gulp.dest(paths.projectCss))
 });
 
@@ -96,8 +97,15 @@ gulp.task('json', () => {
     .pipe(gulp.dest(paths.projectJson));
 });
 
+gulp.task('json:watch', () => {
+  return gulp.watch(paths.devJson, gulp.series('json', (done) => {
+    bs.reload();
+    done();
+  }));
+});
+
 gulp.task('sass:watch', () => {
-  return gulp.watch('app/style/**/*.sass', gulp.series('sass', (done) => {
+  return gulp.watch('app/style/**/*.sass', gulp.series('sass', 'concat', (done) => {
     bs.reload();
     done();
   }));
@@ -118,10 +126,10 @@ gulp.task('html:watch', () => {
 });
 
 gulp.task('css:watch', () => {
-  return gulp.watch('app/style/**/*.css', gulp.series('css', (done) => {
+  return gulp.watch('app/style/**/*.css', gulp.series('css', 'concat', (done) => {
     bs.reload();
     done();
   }));
 });
 
-gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'css', 'js:es6', 'js:babel', 'img', 'json',), gulp.parallel('concat', 'sass:watch', 'css:watch', 'html:watch', 'js:watch', 'server')))
+gulp.task('default', gulp.series('clean', gulp.parallel('html', 'sass', 'css', 'js:es6', 'js:babel', 'img', 'json',), gulp.parallel('concat', 'sass:watch', 'css:watch', 'html:watch', 'js:watch', 'json:watch', 'server')))

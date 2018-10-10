@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shop</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/product.css">
-    <link rel="stylesheet" href="style/jquery-ui.theme.min.css"> -->
     <link rel="stylesheet" href="style/all.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -60,36 +56,11 @@
             </div>
             <div class="header-left">
                 <a href="shopping-cart.html"><img src="img/cart.svg" alt="cart"></a>
+                <div class="cart-quantity hidden"></div>
                 <div class="header-account">
                     <p>My Account</p>
                     <div class="arrow-down"></div>
-                    <div class="cart-menu">
-                        <div class="item-cart">
-                            <img src="img/item_cart.png" alt="">
-                            <article class="item-cart__article">
-                                <h4 class="cart-menu-title">Rebox Zane</h4>
-                                <p class="stars">
-                                    <i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i>
-                                </p>
-                                <p class="count"><span class="cart-count">1</span> x <span class="cart-prize">$250</span></p>
-                            </article>
-                            <a href="#" class="del"><i class="fas fa-times-circle"></i></a>
-                        </div>
-                        <div class="item-cart">
-                            <img src="img/item_cart.png" alt="">
-                            <article class="item-cart__article">
-                                <h4 class="cart-menu-title">Rebox Zane</h4>
-                                <p class="stars">
-                                    <i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i><i class="far fa-star fa-xs"></i>
-                                </p>
-                                <p class="count"><span class="cart-count">1</span> x <span class="cart-prize">$250</span></p>
-                            </article>
-                            <a href="#" class="del"><i class="fas fa-times-circle"></i></a>
-                        </div>
-                        <p class="total_cart">TOTAL <span>$500.00</span></p>
-                        <a href="checkout.html" class="btn_cart-menu">Checkout</a>
-                        <a href="shopping-cart.html" class="btn_cart-menu">Go to cart</a>
-                    </div>
+                    <div class="cart-menu"></div>
                 </div>
             </div>
         </div>
@@ -229,11 +200,11 @@
                         <img src="img/layer2.png" alt="">
                         <div class="item-desc">
                             <h3>mango people t-shirt</h3>
-                            <p>$52.00</p>
+                            <p>1600.00 руб.</p>
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="22" data-price="1600" data-name="mango-t-shirt" data-src="img/layer2.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -248,7 +219,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="101" data-price="1560" data-name="jacket" data-src="img/layer3.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -263,7 +234,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="102" data-price="1100" data-name="sweater" data-src="img/layer4.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -278,7 +249,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="103" data-price="1100" data-name="coat" data-src="img/layer5.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -293,7 +264,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="104" data-price="900" data-name="dress" data-src="img/layer6.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -308,7 +279,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="105" data-price="1300" data-name="knit" data-src="img/layer7.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -323,7 +294,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="106" data-price="1870" data-name="blazer" data-src="img/layer8.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -338,7 +309,7 @@
                         </div>
                     </a>
                     <div class="flex-center">
-                        <a href="#" class="add-to-cart">
+                        <a href="#" class="add-to-cart" data-id="107" data-price="1750" data-name="denim" data-src="img/layer9.png">
                             <img src="img/white_cart.svg" alt="cart">
                             Add to Cart
                         </a>
@@ -505,9 +476,17 @@
         </section>
     </footer>
     <script src="js/Carousel.min.js"></script>
+    <script src="js/CartUIHeader.min.js"></script>
+    <script src="js/Cart.min.js"></script>
+    <script src="js/Product.min.js"></script>
     <script>
         $(document).ready(() => {
             let carousel = new Carousel('json/popItem.json', '.slider', '#slider-img');
+            let cart = new Cart('json/cart.json', '.cart-menu');
+            $('.add-to-cart').click(e => {
+                e.preventDefault();
+                cart._addProduct(e.target);
+            });
         });
     </script>
 </body>
