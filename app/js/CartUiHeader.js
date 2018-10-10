@@ -32,6 +32,10 @@ class CartUiHeader {
   _renderSum(amount, countGoods){
       $('.total_cart').html(`TOTAL <span>${amount}</span>руб.`);
       $('.cart-quantity').text(`${countGoods}`);
+      if($('.total-price')) {
+        $('.price').text(`${amount}`);
+        $('.price-total').text(`${amount}`)
+      }
   }
 
   _renderItem(product){
