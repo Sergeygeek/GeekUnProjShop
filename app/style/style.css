@@ -98,7 +98,7 @@ header {
     border: 1px solid #e6e6e6;
     top: 69px;
     display: none;
-    z-index: 2;
+    z-index: 4;
     transition: color 0.4s;
 }
 

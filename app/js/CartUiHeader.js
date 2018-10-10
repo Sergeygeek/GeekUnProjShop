@@ -44,7 +44,7 @@ class CartUiHeader {
       }
     );
 
-    let $delBtn = $('<a href="#" class="del"><i class="fas fa-times-circle"></i></a>');
+    let $delBtn = $('<a href="#" class="del delBtn"><i class="fas fa-times-circle"></i></a>');
     let $count = $('<p/>', {
       class: 'count',
       html: `<span class="cart-count">${product.quantity}</span> x <span class="cart-prize">${product.price}</span>`
