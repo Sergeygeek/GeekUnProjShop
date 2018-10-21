@@ -99,13 +99,13 @@
                 </form>
             </div>
             <div class="header-left">
-                <a href="#">
-                    <img src="img/cart.svg" alt="cart">
-                </a>
-                <a href="#" class="header-account">
+                <a href="#"><img src="img/cart.svg" alt="cart"></a>
+                <div class="cart-quantity hidden"></div>
+                <div class="header-account">
                     <p>My Account</p>
                     <div class="arrow-down"></div>
-                </a>
+                    <div class="cart-menu"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -497,6 +497,17 @@
             </div>
         </section>
     </footer>
+    <script src="js/Cart.min.js"></script>
+    <script src="js/Product.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let cart = new Cart('json/cart.json', '.cart-menu');
+            $('.add-to-cart').click(e => {
+                e.preventDefault();
+                cart._addProduct(e.target);
+            });
+        });
+    </script>
 </body>
 
 </html>

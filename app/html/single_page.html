@@ -55,11 +55,13 @@
                 </form>
             </div>
             <div class="header-left">
-                <a href="#"><img src="img/cart.svg" alt="cart"></a>
-                <a href="#" class="header-account">
+                <a href="shopping-cart.html"><img src="img/cart.svg" alt="cart"></a>
+                <div class="cart-quantity hidden"></div>
+                <div class="header-account">
                     <p>My Account</p>
                     <div class="arrow-down"></div>
-                </a>
+                    <div class="cart-menu"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -390,5 +392,18 @@
             
         </section>
     </footer>
+    <script src="js/Carousel.min.js"></script>
+    <script src="js/Cart.min.js"></script>
+    <script src="js/Product.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let carousel = new Carousel('json/popItem.json', '.slider', '#slider-img');
+            let cart = new Cart('json/cart.json', '.cart-menu');
+            $('.add-to-cart').click(e => {
+                e.preventDefault();
+                cart._addProduct(e.target);
+            });
+        });
+    </script>
 </body>
 </html>
